@@ -1,5 +1,6 @@
 extends Area2D
 
+signal explode
 var travelled_distance = 0
 
 func _physics_process(_delta):
@@ -14,6 +15,7 @@ func _physics_process(_delta):
 		queue_free()
 
 func _on_body_entered(body):
+	explode
 	queue_free()
 	if body.has_method("take_damage"):
 		body.take_damage()
