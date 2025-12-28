@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cdefrvb83esat" path="res://scripts/game.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://bov5wuwap0yav" path="res://scenes/player.tscn" id="2_lbhrr"]
-[ext_resource type="PackedScene" uid="uid://djh4tq4lb42xh" path="res://scenes/pinetree.tscn" id="3_iywne"]
+[ext_resource type="PackedScene" uid="uid://batsuao5georn" path="res://scenes/TREE.tscn" id="3_lnu2h"]
 
 [sub_resource type="Curve2D" id="Curve2D_3nrt2"]
 _data = {
@@ -36,27 +36,6 @@ unique_name_in_owner = true
 position = Vector2(-83, -133)
 rotation = 0.018783918
 
-[node name="Pinetree" parent="." instance=ExtResource("3_iywne")]
-position = Vector2(271, 212)
-
-[node name="Pinetree2" parent="." instance=ExtResource("3_iywne")]
-position = Vector2(475, 906)
-
-[node name="Pinetree3" parent="." instance=ExtResource("3_iywne")]
-position = Vector2(1453, 174)
-
-[node name="Pinetree4" parent="." instance=ExtResource("3_iywne")]
-position = Vector2(1500, 734)
-
-[node name="Pinetree5" parent="." instance=ExtResource("3_iywne")]
-position = Vector2(1655, 673)
-
-[node name="Pinetree6" parent="." instance=ExtResource("3_iywne")]
-position = Vector2(1622, 819)
-
-[node name="Pinetree7" parent="." instance=ExtResource("3_iywne")]
-position = Vector2(1291, 991)
-
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.3
 autostart = true
@@ -89,5 +68,8 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 156
 text = "Game Over"
 
+[node name="TREE_AREA" parent="." instance=ExtResource("3_lnu2h")]
+
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="TREE_AREA" method="_on_timer_timeout"]
