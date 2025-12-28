@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://ccv75h5srkqkk"]
 
-[ext_resource type="Script" uid="uid://cdefrvb83esat" path="res://game.gd" id="1_mstmp"]
-[ext_resource type="PackedScene" uid="uid://bov5wuwap0yav" path="res://player.tscn" id="1_wy3x4"]
-[ext_resource type="PackedScene" uid="uid://djh4tq4lb42xh" path="res://pinetree.tscn" id="2_fpdp3"]
+[ext_resource type="Script" uid="uid://cdefrvb83esat" path="res://scripts/game.gd" id="1_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://bov5wuwap0yav" path="res://scenes/player.tscn" id="2_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://djh4tq4lb42xh" path="res://scenes/pinetree.tscn" id="3_iywne"]
 
 [sub_resource type="Curve2D" id="Curve2D_3nrt2"]
 _data = {
@@ -12,7 +12,7 @@ point_count = 5
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
-script = ExtResource("1_mstmp")
+script = ExtResource("1_lnu2h")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
@@ -23,7 +23,7 @@ offset_bottom = 1091.0
 color = Color(0.947199, 0.947199, 0.947199, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="Player" parent="." instance=ExtResource("1_wy3x4")]
+[node name="Player" parent="." instance=ExtResource("2_lbhrr")]
 position = Vector2(893, 608)
 
 [node name="Path2D" type="Path2D" parent="Player"]
@@ -36,25 +36,25 @@ unique_name_in_owner = true
 position = Vector2(-83, -133)
 rotation = 0.018783918
 
-[node name="Pinetree" parent="." instance=ExtResource("2_fpdp3")]
+[node name="Pinetree" parent="." instance=ExtResource("3_iywne")]
 position = Vector2(271, 212)
 
-[node name="Pinetree2" parent="." instance=ExtResource("2_fpdp3")]
+[node name="Pinetree2" parent="." instance=ExtResource("3_iywne")]
 position = Vector2(475, 906)
 
-[node name="Pinetree3" parent="." instance=ExtResource("2_fpdp3")]
+[node name="Pinetree3" parent="." instance=ExtResource("3_iywne")]
 position = Vector2(1453, 174)
 
-[node name="Pinetree4" parent="." instance=ExtResource("2_fpdp3")]
+[node name="Pinetree4" parent="." instance=ExtResource("3_iywne")]
 position = Vector2(1500, 734)
 
-[node name="Pinetree5" parent="." instance=ExtResource("2_fpdp3")]
+[node name="Pinetree5" parent="." instance=ExtResource("3_iywne")]
 position = Vector2(1655, 673)
 
-[node name="Pinetree6" parent="." instance=ExtResource("2_fpdp3")]
+[node name="Pinetree6" parent="." instance=ExtResource("3_iywne")]
 position = Vector2(1622, 819)
 
-[node name="Pinetree7" parent="." instance=ExtResource("2_fpdp3")]
+[node name="Pinetree7" parent="." instance=ExtResource("3_iywne")]
 position = Vector2(1291, 991)
 
 [node name="Timer" type="Timer" parent="."]
