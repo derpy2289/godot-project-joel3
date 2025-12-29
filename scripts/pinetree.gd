@@ -5,5 +5,5 @@ extends StaticBody2D
 func _ready() -> void:
 	pass # Replace with function body.
 
-func kill_me():
+func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	queue_free()
