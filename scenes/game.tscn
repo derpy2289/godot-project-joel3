@@ -36,6 +36,7 @@ position = Vector2(-83, -133)
 rotation = 0.018783918
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.404
 autostart = true
 
 [node name="GameOver" type="CanvasLayer" parent="."]
@@ -66,5 +67,6 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 156
 text = "Game Over"
 
+[connection signal="tree_exited" from="." to="." method="_on_mob_tree_exited"]
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
