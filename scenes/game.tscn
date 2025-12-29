@@ -36,7 +36,7 @@ position = Vector2(-83, -133)
 rotation = 0.018783918
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.404
+wait_time = 0.4
 autostart = true
 
 [node name="GameOver" type="CanvasLayer" parent="."]
