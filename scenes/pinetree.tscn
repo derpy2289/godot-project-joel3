@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://djh4tq4lb42xh"]
+[gd_scene load_steps=5 format=3 uid="uid://djh4tq4lb42xh"]
 
+[ext_resource type="Script" uid="uid://dijp7tm7ojqcp" path="res://scripts/pinetree.gd" id="1_nywxu"]
 [ext_resource type="Texture2D" uid="uid://b7rhtttevhxtj" path="res://characters/ground_shadow.png" id="1_tbwq1"]
 [ext_resource type="Texture2D" uid="uid://caqfk2xng5v5u" path="res://trees/pine_tree.png" id="2_h321j"]
 
@@ -7,6 +8,7 @@
 radius = 23.0868
 
 [node name="Pinetree" type="StaticBody2D"]
+script = ExtResource("1_nywxu")
 
 [node name="GroundShadow" type="Sprite2D" parent="."]
 modulate = Color(0.546713, 0.725783, 0.780188, 1)
@@ -21,3 +23,8 @@ texture = ExtResource("2_h321j")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_0i26j")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+rect = Rect2(-60, -131, 120, 162)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
