@@ -12,8 +12,6 @@ func _physics_process(_delta):
 	velocity = direction * 300.0
 	move_and_slide()
 
-
-
 func take_damage():
 	health -= 1
 	%Slime.play_hurt()

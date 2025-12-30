@@ -34,11 +34,9 @@ func _on_timer_timeout() -> void:
 	spawn_mob()
 	
 
-
 func _on_player_health_depleted():
 	%GameOver.visible = true
 	get_tree().paused = true
-
 
 func _on_mob_tree_exited() -> void:
 	print(mob_count)
